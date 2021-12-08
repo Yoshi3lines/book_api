@@ -3,15 +3,16 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :destroy]
 
   def show
-    @book = Book.find(params[:id])
+    # @book = Book.find(params[:id])
     respond_to do |format|
       format.html
       format.json
+      # format.json { render json: @book }
     end
   end
 
   def destroy
-    @book = Book.find(params[:id])
+    # @book = Book.find(params[:id])
     respond_to do |format|
       format.html { redirect_to "/" }
       format.json { head :no_content }
